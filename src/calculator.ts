@@ -52,23 +52,15 @@ function calculateResult(): void {
         const previousValue = parseFloat(previousInputValue);
 
         if (!isNaN(currentValue) && !isNaN(previousValue)) {
-            switch (currentOperation) {
-                case '+':
-                    currentInputValue = (previousValue + currentValue).toString();
-                    break;
-                case '-':
-                    currentInputValue = (previousValue - currentValue).toString();
-                    break;
-                case '*':
-                    currentInputValue = (previousValue * currentValue).toString();
-                    break;
-                case '/':
-                    if (currentValue === 0) {
-                        currentInputValue = 'Error';
-                    } else {
-                        currentInputValue = (previousValue / currentValue).toString();
-                    }
-                    break;
+            if (currentOperation === '+') currentInputValue = (previousValue + currentValue).toString();
+            if (currentOperation === '-') currentInputValue = (previousValue - currentValue).toString();
+            if (currentOperation === '*') currentInputValue = (previousValue * currentValue).toString();
+            if (currentOperation === '/') {
+                if (currentValue === 0) {
+                    currentInputValue = 'Syntax Error';
+                } else {
+                    currentInputValue = (previousValue / currentValue).toString();
+                }
             }
         }
 
@@ -85,11 +77,9 @@ function calculateResult(): void {
  */
 
 function inputNumber(num: number): void {
-    console.log('inputNumber')
     currentInputValue += num.toString();
     updateDisplay();
 }
-inputNumber(10)
 
 /**
  * Sets the current operation and moves the current input value to the previous input value.
