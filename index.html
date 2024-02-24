@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Calculator</title>
-    <link rel="stylesheet" href="./src/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
     <h1>TypeScript Calculator</h1>
     <div id="calculator">
-        <input type="text" id="display" disabled>
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="inputNumber(7)">7</button>
-        <button onclick="inputNumber(8)">8</button>
-        <button onclick="inputNumber(9)">9</button>
-        <button onclick="inputOperator('/')">/</button>
-        <button onclick="inputNumber(4)">4</button>
-        <button onclick="inputNumber(5)">5</button>
-        <button onclick="inputNumber(6)">6</button>
-        <button onclick="inputOperator('*')">*</button>
-        <button onclick="inputNumber(1)">1</button>
-        <button onclick="inputNumber(2)">2</button>
-        <button onclick="inputNumber(3)">3</button>
-        <button onclick="inputOperator('-')">-</button>
-        <button onclick="inputNumber(0)">0</button>
-        <button onclick="calculateResult()">=</button>
-        <button onclick="inputOperator('+')">+</button>
+      <input type="text" id="display" disabled />
+      <div class="btns">
+        <button id="clearBtn">C</button>
+        <button id="seven" value="7">7</button>
+        <button id="eight" value="8">8</button>
+        <button id="nine" value="9">9</button>
+        <button id="divide" value="/">/</button>
+        <button id="four" value="4">4</button>
+        <button id="five" value="5">5</button>
+        <button id="six" value="6">6</button>
+        <button id="multiply">*</button>
+        <button id="one" value="1">1</button>
+        <button id="two" value="2">2</button>
+        <button id="three" value="3">3</button>
+        <button id="subtract">-</button>
+        <button id="zero" value="0">0</button>
+        <button id="equal-sign">=</button>
+        <button id="add">+</button>
+      </div>
     </div>
 
     <script src="./src/calculator.ts" type="module"></script>
-</body>
+  </body>
 </html>

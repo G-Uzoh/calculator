@@ -20,9 +20,28 @@ body {
   margin-bottom: 10px;
 }
 
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.btns button {
+  cursor: pointer;
+}
+
 #calculator button {
   width: 50px;
   height: 50px;
   font-size: 18px;
   margin: 2px;
+}
+
+#clearBtn {
+  background: #c21d1d;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
 }
